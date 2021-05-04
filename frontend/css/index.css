@@ -1,0 +1,33 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+/* Modify brand and text color */
+
+.navbar {
+	background-color: #ffa3b460;
+}
+
+.align-center {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+
+}
+.align-center img {
+width: 500px;
+max-width: 100%;
+}
+
+body {
+  /* background-image: url('../assets/background.png');
+  background-repeat:no-repeat;
+  /* background-size: cover; */
+  /* background-origin: bottom left */ 
+  background: url(../assets/background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
