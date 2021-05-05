@@ -8,7 +8,6 @@
 }
 
 #webgazerVideoContainer {
-  position: relative  ;
   border: 3px solid rgb(235, 217, 227) !important;
   border-radius: 5px;
   margin-top:  200px !important;

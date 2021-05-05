@@ -56,7 +56,7 @@ webgazer
   function playAudio() {
     var x = document.getElementById("myAudio"); 
 
-    // x.play()
+    x.play()
   }
 // webgazer.showVideoPreview(false).showPredictionPoints(false)
 
@@ -67,4 +67,55 @@ function select(event){
   option[2].classList.remove("selected")
   event.classList.add("selected")
   console.log(event.innerText)
+}
+
+
+
+
+function showQuestion(event){
+  const Questions =[
+    {
+      question:"What is the capital of india",
+      options :[
+        {
+         option:"Wuhan",
+         correct:false 
+        },
+        {
+          option:"Gujarat",
+          correct:true 
+         },
+         {
+          option:"Lahore",
+          correct:false 
+         }
+      ]
+    },
+    {
+      question:"Who invented the Light Bulb?",
+      options :[
+        {
+         option:"GV",
+         correct:false 
+        },
+        {
+          option:"Shivam Mehta",
+          correct:true 
+         },
+         {
+          option:"Thomas Shelby   ",
+          correct:false 
+         }
+      ]
+    },
+    
+  
+  ]
+question = document.getElementById("question")
+question.innerText = Questions[Number(event.innerText)-1].question
+let option = document.getElementsByClassName("option")
+  option[0].innerText=Questions[Number(event.innerText)-1].options[0].option
+  option[1].innerText=Questions[Number(event.innerText)-1].options[1].option
+  option[2].innerText=Questions[Number(event.innerText)-1].options[2].option
+console.log(event.innerText)
 }
