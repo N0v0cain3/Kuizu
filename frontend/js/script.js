@@ -10,7 +10,7 @@ let lookDirection = null
 
 webgazer
   .setGazeListener((data, timestamp) => {
-    console.log(data,timestamp)
+    // console.log(data,timestamp)
     if (data == null || lookDirection === "STOP") return
 
     if (
@@ -56,6 +56,15 @@ webgazer
   function playAudio() {
     var x = document.getElementById("myAudio"); 
 
-    x.play()
+    // x.play()
   }
 // webgazer.showVideoPreview(false).showPredictionPoints(false)
+
+function select(event){
+  let option = document.getElementsByClassName("option")
+  option[0].classList.remove("selected")
+  option[1].classList.remove("selected")
+  option[2].classList.remove("selected")
+  event.classList.add("selected")
+  console.log(event.innerText)
+}
