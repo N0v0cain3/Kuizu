@@ -7,6 +7,7 @@ const RIGHT_CUTOFF = window.innerWidth - window.innerWidth / 4
 let startLookTime = Number.POSITIVE_INFINITY
 let lookDirection = null
 
+
 webgazer
   .setGazeListener((data, timestamp) => {
     console.log(data,timestamp)
@@ -33,7 +34,9 @@ webgazer
 
     if (startLookTime + LOOK_DELAY < timestamp) {
       if (lookDirection === "LEFT") {
+       playAudio()
         alert("stop looking around")
+       
 
       } else {
         alert("stop looking around")
@@ -48,4 +51,10 @@ webgazer
   })
   .begin()
 
+
+  function playAudio() {
+    var x = document.getElementById("myAudio"); 
+
+    x.play()
+  }
 // webgazer.showVideoPreview(false).showPredictionPoints(false)
