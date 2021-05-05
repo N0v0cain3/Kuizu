@@ -39,6 +39,7 @@ webgazer
        
 
       } else {
+        playAudio()
         alert("stop looking around")
       }
 
