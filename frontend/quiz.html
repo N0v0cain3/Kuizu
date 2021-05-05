@@ -46,63 +46,76 @@
       <div class="col-md-3"> </div>
       <div class="col-md-6 quiz-box">
         <div id="question">
-          Q What is the capital of india
+          <!-- Q What is the capital of india -->
         </div>
         <div id="options">
           <div class="option" onclick="select(this)">
-            Wuhan
+            <!-- Wuhan -->
           </div>
           <div class="option" onclick="select(this)">
-            Lahore
+            <!-- Lahore -->
           </div>
           <div class="option" onclick="select(this)">
-            Gujarat
+            <!-- Gujarat -->
           </div>
         </div>
       </div>
-      <div class="col-md-3"> 
-       <div>
-      <div class="row" style="margin-top: 60px;">
+      <div class="col-md-3">
+        <div>
+          <div class="row" style="margin-top: 60px;">
             <div class="col-md-4">
               <div onclick="showQuestion(this)">
-                <div class="question-box" >1</div>
+                <div class="question-box">1</div>
               </div>
             </div>
             <div class="col-md-4">
               <div onclick="showQuestion(this)">
-                <div class="question-box" >2</div>
+                <div class="question-box">2</div>
               </div>
             </div>
             <div class="col-md-4">
               <div onclick="showQuestion(this)">
-                <div class="question-box" >3</div>
+                <div class="question-box">3</div>
               </div>
             </div>
             <div class="col-md-4">
               <div onclick="showQuestion(this)">
-                <div class="question-box" >4</div>
+                <div class="question-box">4</div>
               </div>
             </div>
             <div class="col-md-4">
               <div onclick="showQuestion(this)">
-                <div class="question-box" >5</div>
+                <div class="question-box">5</div>
               </div>
             </div>
             <div class="col-md-4">
               <div onclick="showQuestion(this)">
-                <div class="question-box" >6</div>
+                <div class="question-box">6</div>
               </div>
             </div>
+          </div>
+          <div class="row">
+            <div style="margin-top: 80px; margin-left: 100px; display: flex;
+            justify-content: center;
+            align-items: center;" class="">
+              <button style="padding:10px 15px" onclick="save(this)">Save</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-      </div>
-    </div>
 
 
-
+<button onclick="result()">
+  Result
+</button>
+<div id="result"></div>
   </div>
 
   </div>
 </body>
-
+<script>
+ 
+  var answers = []
+</script>
 </html>

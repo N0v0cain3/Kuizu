@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Detect Object</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="./assets/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Custom fonts for this template -->
+ 
+
+    <!-- Custom styles for this template -->
+    <link href="./css/object.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+  
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="../frontend/assets/logo.svg" width="" height="50" alt="50">
+    </a>
+
+    <div class="navbar-right" style="padding: 5px; margin: 20px;">
+      <a style="padding: 10px;" href="#"> login </a>
+      <a href="#">signup</a>
+    </div>
+
+  </nav>
+    <!-- Page Header -->
+    <header class="masthead" style="background-color: grey">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 mx-auto">
+
+                    <div class="demo-section">
+                        <h2 class="subheading demo-heading float-left"></h2>
+                        <div id="close-web-cam" class="display-none clearfix float-right" style="margin-left: 10px;">
+                            <a onclick="close_stream()" class="btn btn-primary float-left" href="#">Close</a>
+                        </div>
+                        <div id="web-cam-btn" class="clearfix float-right" style="margin-left: 10px;"
+                            title="Please wait 5-10 secs as the tf model downloads intially">
+                            <a onclick="load_webcam()" class="btn btn-primary float-left disabled" href="#">Try Real
+                                Time (on webcam feed)</a>
+                        </div>
+                        <div id="upload_btn_div" class="clearfix float-right"
+                            title="Please wait 5-10 secs as the tf model downloads intially">
+                            <a onclick="invoke_upload_image()" class="btn btn-primary float-left disabled"
+                                href="#">Upload Image &rarr;</a>
+                        </div>
+                        <input style="display:none;" id="upload-btn" type="file" onchange="upload_image()"><br>
+                        <div class="clear"></div>
+                        <div class="result-div" id="result">
+                            <div id="spinner" class="spinner"><img style='width:50px;' src='images/spinner.gif' /></div>
+                            <img style="width:100%; display: none" id="img" src="" alt="Image Preview ..." />
+                            <canvas id="canvas"></canvas>
+                        </div>
+                        <video id="video" style="display:none" width="700" height="500"></video>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
+   <!-- Custom scripts for this template -->
+    <script src="./js/object.js" defer></script>
+
+</body>
+
+</html>
