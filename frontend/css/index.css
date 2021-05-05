@@ -3,12 +3,12 @@
 }
 /* Modify brand and text color */
 
-.navbar {
+.navI {
 	background-color: #ffa3b460;
 }
 
 #webgazerVideoContainer {
-  border: 3px solid rgb(235, 217, 227) !important;
+  border: 3px solid rgb(129, 33, 86) !important;
   border-radius: 5px;
   margin-top:  200px !important;
   margin-left: 50px !important;
@@ -82,7 +82,72 @@ body {
   align-items: center;
   color: #494949;
 }
-
 .selected{
   background-color: #e9e9e9;
+}
+
+/* signup */
+.s{
+  margin-top:-50px
+}
+.sCon{
+  height:100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup{
+  background:rgba(221, 34, 68, 0.5);
+  padding:4%;
+  border-radius: 20px;
+}
+.signup>h3{
+  margin-top:0;
+  color:white;
+  font-weight:600;
+  text-align: center;
+}
+.signup>div{
+  display:flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding:2%;
+}
+.signup>div>label{
+  color:white;
+}
+.signup>div>input{
+  border:1px solid black;
+  border-radius: 5px;
+  padding:2%;
+}
+.signup>div>button{
+  width:80%;
+  margin:auto;
+  margin-top: 5px;
+  padding:3%;
+  border-radius:10px;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  color:white;
+  background:#6C66D0;
+}
+.signup>div>p{
+  font-size:1vw;
+  color:white;
+  text-align: center;
+  padding-top:2px;
+}
+.signup>div>p>span{
+  color:#6C66D0;
+}
+.imgS{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
+.imgS>img{
+  height:80vh;
 }
