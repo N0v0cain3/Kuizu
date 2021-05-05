@@ -103,13 +103,79 @@ function showQuestion(event){
           correct:true 
          },
          {
-          option:"Thomas Shelby   ",
+          option:"Thomas Shelby",
           correct:false 
          }
       ]
     },
-    
-  
+    {
+      question:"One kilogram equals how many grams?",
+      options :[
+        {
+         option:"1000",
+         correct:false 
+        },
+        {
+          option:"100",
+          correct:true 
+         },
+         {
+          option:"10",
+          correct:false 
+         }
+      ]
+    },
+    {
+      question:"Which is the smallest even number?",
+      options :[
+        {
+         option:"0",
+         correct:false 
+        },
+        {
+          option:"-2",
+          correct:true 
+         },
+         {
+          option:"2",
+          correct:false 
+         }
+      ]
+    },
+    {
+      question:"5 times 6 equals to",
+      options :[
+        {
+         option:"30",
+         correct:false 
+        },
+        {
+          option:"11",
+          correct:true 
+         },
+         {
+          option:"300",
+          correct:false 
+         }
+      ]
+    },
+    {
+      question:"Capital of Himachal Pradesh",
+      options :[
+        {
+         option:"Shimla",
+         correct:false 
+        },
+        {
+          option:"Dharmashala",
+          correct:true 
+         },
+         {
+          option:"F",
+          correct:false 
+         }
+      ]
+    },
   ]
 question = document.getElementById("question")
 question.innerText = Questions[Number(event.innerText)-1].question
