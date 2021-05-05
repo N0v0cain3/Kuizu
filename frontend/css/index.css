@@ -86,7 +86,7 @@ body {
   background-color: #e9e9e9;
 }
 
-/* signup */
+/* signup and login */
 .s{
   margin-top:-50px
 }
@@ -150,4 +150,63 @@ body {
 }
 .imgS>img{
   height:80vh;
+}
+
+/* instructions */
+.navbar-right{
+  margin:10px;
+  padding:0;
+}
+.user{
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.user>div{
+  margin-right:5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.user>div>p{
+  margin:0;
+  padding:0;
+  font-size:0.95vw;
+  vertical-align:bottom;
+  text-align: end;
+}
+.user>img{
+  height:8vh;
+  background:#B44E48;
+  border-radius: 10%;
+  padding:5px;
+}
+.instructions{
+  background:rgba(216,0,39,0.5);
+  width:75%;
+  margin:auto;
+  height:auto;
+  margin-top:3%;
+  border-radius: 15px;
+  padding:4%;
+}
+.instructions>div>img{
+  height:50vh;
+}
+.instructions>div>h2,
+.instructions>div>div>p{
+  color:white;
+}
+.instructions>div>button{
+  background: #D3544B;
+  width:30%;
+  margin:auto;
+  margin-top: 5px;
+  padding:2%;
+  border-radius:10px;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  color:white;
+  text-transform: uppercase;
 }
