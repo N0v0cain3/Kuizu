@@ -26,23 +26,57 @@
     <div class="selection">
       <h2>Upcoming Quizzes</h2>
       <div>
-        <div>
+
+        <div class="col-md-4" id="expandDiv1">
           <h2>Quiz 1</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur Neque saepe dolor eaque aspernatur dolorum, unde culpa accusantium?</p>
-          <button>Join</button>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque saepe dolor eaque aspernatur dolorum, unde culpa</p>
+          <div id="codeBox1" style="display:none">
+            <label>Enter Code</label>
+            <input type="text" placeholder="Code"/>
+            <button>Start</button>
+          </div>
+          <button id="join1" onclick="showCode(1)">Join</button>
         </div>
-        <div>
+
+        <div class="col-md-4" id="expandDiv2">
           <h2>Quiz 2</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque saepe dolor eaque aspernatur dolorum, unde culpa</p>
-          <button>Join</button>
+          <div id="codeBox2" style="display:none">
+            <label>Enter Code</label>
+            <input type="text" placeholder="Code"/>
+            <button>Start</button>
+          </div>
+          <button id="join2" onclick="showCode(2)">Join</button>
         </div>
-        <div>
+
+        <div class="col-md-4" id="expandDiv3">
           <h2>Quiz 3</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. debitis, sequi laboriosam Qui odit non incidunt?</p>
-          <button>Join</button>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque saepe dolor eaque aspernatur dolorum, unde culpa</p>
+          <div id="codeBox3" style="display:none">
+            <label>Enter Code</label>
+            <input type="text" placeholder="Code"/>
+            <button>Start</button>
+          </div>
+          <button id="join3" onclick="showCode(3)">Join</button>
         </div>
+
       </div>
       <img src="../frontend/assets/Saly-17.png"/>
     </div>
+<script>
+  function showCode(a){
+    var x = document.getElementById(`codeBox${a}`);
+    var y = document.getElementById(`expandDiv${a}`);
+    var z = document.getElementById(`join${a}`);
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      y.classList.add("q2");
+      x.classList.add("inputScale");
+      z.style.display="none";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
 </body>
 </html>
