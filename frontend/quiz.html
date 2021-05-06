@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/index.css">
-  <script src="https://webgazer.cs.brown.edu/webgazer.js?" defer></script>
+  <!-- <script src="https://webgazer.cs.brown.edu/webgazer.js?" defer></script> -->
   <script src="./js/script.js" defer></script>
   <title>Kuizu</title>
   <style>
@@ -24,8 +24,9 @@
     </a>
 
     <div class="navbar-right" style="padding: 5px; margin: 20px;">
-      <a style="padding: 10px;" href="#"> login </a>
-      <a href="#">signup</a>
+      <!-- <a style="padding: 10px;" href="#"> login </a>
+      <a href="#">signup</a> -->
+      <img src="https://lh3.googleusercontent.com/ogw/ADGmqu_VZjqel-SWjocK_AAglVGk2Yk-dHHS-Vl2oAtCMA=s83-c-mo" style="border-radius: 50%;" height="35px" width="35px" alt="">
     </div>
 
   </nav>
@@ -46,7 +47,7 @@
       <div class="col-md-3"> </div>
       <div class="col-md-6 quiz-box">
         <div id="question">
-          Q What is the capital of india
+          What is the capital of india
         </div>
         <div id="options">
           <div class="option" onclick="select(this)">
@@ -60,29 +61,55 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3"> 
-       <div>
-      <div class="row" style="margin-top: 60px;">
+      <div class="col-md-3">
+        <div>
+          <div class="row" style="margin-top: 60px;">
             <div class="col-md-4">
-              <div class="question-box" onclick="showQuestion(this)">1</div>
+              <div onclick="showQuestion(this)">
+                <div class="question-box">1</div>
+              </div>
             </div>
             <div class="col-md-4">
-              <div class="question-box" onclick="showQuestion(this)">2</div>
+              <div onclick="showQuestion(this)">
+                <div class="question-box">2</div>
+              </div>
             </div>
             <div class="col-md-4">
-              <div class="question-box" onclick="showQuestion(this)">3</div>
+              <div onclick="showQuestion(this)">
+                <div class="question-box">3</div>
+              </div>
             </div>
             <div class="col-md-4">
-              <div class="question-box" onclick="showQuestion(this)">4</div>
+              <div onclick="showQuestion(this)">
+                <div class="question-box">4</div>
+              </div>
             </div>
             <div class="col-md-4">
-              <div class="question-box" onclick="showQuestion(this)">5</div>
+              <div onclick="showQuestion(this)">
+                <div class="question-box">5</div>
+              </div>
             </div>
             <div class="col-md-4">
-              <div class="question-box" onclick="showQuestion(this)">6</div>
+              <div onclick="showQuestion(this)">
+                <div class="question-box">6</div>
+              </div>
             </div>
-      </div>
-    </div>
+          </div>
+          <div class="row">
+            <div style="margin-top: 80px; margin-left: 100px; display: flex;
+            justify-content: center;
+            align-items: center;" class="">
+              <button style="padding:10px 15px" onclick="save(this)">Save</button>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 40px; margin-left: 100px; display: flex;
+          justify-content: center">
+            <button style="background-color:rgb(255, 115, 115); padding:10px 10px" onclick="result()">
+              Result
+            </button>
+            <div id="result"></div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -92,5 +119,8 @@
 
   </div>
 </body>
-
+<script>
+ 
+  var answers = []
+</script>
 </html>
