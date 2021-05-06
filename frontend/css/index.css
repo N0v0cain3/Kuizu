@@ -210,3 +210,49 @@ body {
   color:white;
   text-transform: uppercase;
 }
+/* selection */
+.selection{
+  flex-direction: column;
+  /* display:flex; */
+  justify-content: center;
+  padding:1% 5%;
+  height:100vh;
+}
+.selection>h2{
+  text-align: left !important;
+  width:100%;
+}
+.selection>div{
+  display:flex;
+  margin-bottom: 10%;
+}
+.selection>div>div{
+  margin:3%;
+  background:rgba(216,216,216,0.3);
+  border-radius:10px;
+  padding:2%;
+  flex:1;
+}
+.selection>div>div>h2{
+  text-align: center;
+  font-weight:600;
+}
+.selection>div>div>p{
+  font-size:1vw;
+}
+.selection>div>div>button{
+  float:right;
+  background:rgba(224,34,68,.5);
+  border:none;
+  outline:none;
+  cursor:pointer;
+  border-radius: 5px;
+  padding:2% 4%;
+}
+.selection>img{
+  height:40vh;
+  width:40%;
+  position:absolute;
+  bottom:0;
+  left:35%;
+}
