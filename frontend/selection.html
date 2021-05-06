@@ -65,18 +65,25 @@
     </div>
 <script>
   function showCode(a){
-    var x = document.getElementById(`codeBox${a}`);
-    var y = document.getElementById(`expandDiv${a}`);
-    var z = document.getElementById(`join${a}`);
-    if (x.style.display === "none") {
-      x.style.display = "block";
-      y.classList.add("q2");
-      x.classList.add("inputScale");
-      z.style.display="none";
-    } else {
-      x.style.display = "none";
+      for(let i=1;i<=3;i++){
+        var x = document.getElementById(`codeBox${i}`);
+        var y = document.getElementById(`expandDiv${i}`);
+        var z = document.getElementById(`join${i}`);
+        if(a===i){
+          if (x.style.display === "none") {
+            x.style.display = "block";
+            y.classList.add("q2");
+            x.classList.add("inputScale");
+            z.style.display="none";
+          }
+        } else {
+            x.style.display = "none";
+            y.classList.remove("q2");
+            x.classList.remove("inputScale");
+            z.style.display="block";
+          }
+      }
     }
-  }
 </script>
 </body>
 </html>

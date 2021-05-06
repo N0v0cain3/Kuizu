@@ -278,3 +278,6 @@ body {
   background:#8A8B8F;
   color:white;
 }
+.q2>h2,.q2>p,.q2>div>label{
+  color:white;
+}
