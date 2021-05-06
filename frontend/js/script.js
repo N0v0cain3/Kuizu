@@ -229,10 +229,15 @@ function result(){
     }
   }
  
-  x = document.getElementById("result")
-  x.innerText = ` Your score is ${correct}`
+
   localStorage.setItem("result", correct);
   console.log("Result : ", correct)
-  window.location.replace("http://127.0.0.1:5500/frontend/index.html");
+  window.location.replace("http://127.0.0.1:5500/frontend/complete.html");
 
+};
+
+function showResult() {
+  x = document.getElementById("result")
+  correct = localStorage.getItem("result")
+  x.innerText = `${correct} points`
 }

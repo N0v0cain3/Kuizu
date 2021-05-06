@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="./css/index.css">
 
 </head>
-<body>
+<body  onload="showResult()">
   <!-- Just an image -->
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
@@ -28,8 +28,16 @@
     <div class="row">
       <div class="justify-content-left  row col-md-6">
         <div id="result-box">
+        
             <div style="display: flex; justify-content: center; align-items:center">
-              <img src="./assets/trophy.png" height="80px" alt="">
+              <div class="row">
+                <img src="./assets/trophy.png" style="margin-top:30px; margin-left:60px" height="120px" alt="">
+                <h2>Quiz Completed!</h2>
+                <br>
+                <br>
+                <div style="text-align:center; font-size:30px" id="result"></div>
+              </div>
+             
             </div>
         </div>
         <!-- <div style="padding-top:100px;" class="col-6">
@@ -53,7 +61,7 @@
 </body>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-<script src="./js/main.js"></script>
+<script src="./js/script.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </html>

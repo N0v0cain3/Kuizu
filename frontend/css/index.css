@@ -3,12 +3,12 @@
 }
 /* Modify brand and text color */
 
-.navbar {
+.navI {
 	background-color: #ffa3b460;
 }
 
 #webgazerVideoContainer {
-  border: 3px solid rgb(235, 217, 227) !important;
+  border: 3px solid rgb(129, 33, 86) !important;
   border-radius: 5px;
   margin-top:  200px !important;
   margin-left: 50px !important;
@@ -82,11 +82,205 @@ body {
   align-items: center;
   color: #494949;
 }
-
 .selected{
   background-color: #e9e9e9;
 }
 
+/* signup and login */
+.s{
+  margin-top:-50px
+}
+.sCon{
+  height:100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup{
+  background:rgba(221, 34, 68, 0.5);
+  padding:4%;
+  border-radius: 20px;
+}
+.signup>h3{
+  margin-top:0;
+  color:white;
+  font-weight:600;
+  text-align: center;
+}
+.signup>div{
+  display:flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding:2%;
+}
+.signup>div>label{
+  color:white;
+}
+.signup>div>input{
+  border:1px solid black;
+  border-radius: 5px;
+  padding:2%;
+}
+.signup>div>button{
+  width:80%;
+  margin:auto;
+  margin-top: 5px;
+  padding:3%;
+  border-radius:10px;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  color:white;
+  background:#6C66D0;
+}
+.signup>div>p{
+  font-size:1vw;
+  color:white;
+  text-align: center;
+  padding-top:2px;
+}
+.signup>div>p>span{
+  color:#6C66D0;
+}
+.imgS{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
+.imgS>img{
+  height:80vh;
+}
+
+/* instructions */
+.navbar-right{
+  margin:10px;
+  padding:0;
+}
+.user{
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.user>div{
+  margin-right:5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.user>div>p{
+  margin:0;
+  padding:0;
+  font-size:0.95vw;
+  vertical-align:bottom;
+  text-align: end;
+}
+.user>img{
+  height:8vh;
+  background:#B44E48;
+  border-radius: 10%;
+  padding:5px;
+}
+.instructions{
+  background:rgba(216,0,39,0.5);
+  width:75%;
+  margin:auto;
+  height:auto;
+  margin-top:3%;
+  border-radius: 15px;
+  padding:4%;
+}
+.instructions>div>img{
+  height:50vh;
+}
+.instructions>div>h2,
+.instructions>div>div>p{
+  color:white;
+}
+.instructions>div>button{
+  background: #D3544B;
+  width:30%;
+  margin:auto;
+  margin-top: 5px;
+  padding:2%;
+  border-radius:10px;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  color:white;
+  text-transform: uppercase;
+}
+/* selection */
+.selection{
+  flex-direction: column;
+  /* display:flex; */
+  justify-content: center;
+  padding:1% 5%;
+  height:100vh;
+}
+.selection>h2{
+  text-align: left !important;
+  width:100%;
+}
+.selection>div{
+  display:flex;
+  margin-bottom: 10%;
+}
+.selection>div>div{
+  margin:4%;
+  background:rgba(216,216,216,0.3);
+  border-radius:20px;
+  padding:1%;
+  height:max-content;
+  transition:all 0.2s ease;
+  /* flex:1; */
+}
+.selection>div>div>h2{
+  text-align: center;
+  font-weight:600;
+  margin:0 0 3% 0;
+}
+.selection>div>div>p{
+  font-size:0.85vw;
+}
+.selection>div>div>button{
+  float:right;
+  background:rgba(224,34,68,.5);
+  border:none;
+  outline:none;
+  cursor:pointer;
+  border-radius: 5px;
+  padding:2% 4%;
+}
+.selection>img{
+  height:30vh;
+  width:30%;
+  position:absolute;
+  bottom:0;
+  left:35%;
+}
+.q2{
+  transform: scale(1.2,1.5);
+  background:rgba(224,34,68,.4)!important;
+}
+.inputScale{
+  display:flex !important;
+  flex-direction: column;
+}
+.inputScale>button{
+  width:max-content;
+  margin:2% auto;
+  border:none;
+  outline:none;
+  cursor:pointer !important;
+  border-radius: 5px;
+  padding:1% 5%;
+  background:#8A8B8F;
+  color:white;
+}
+.q2>h2,.q2>p,.q2>div>label{
+  color:white;
+}
 
 #result-box {
   border :3px solid rgb(185, 166, 177);
