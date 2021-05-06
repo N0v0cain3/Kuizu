@@ -24,8 +24,9 @@
     </a>
 
     <div class="navbar-right" style="padding: 5px; margin: 20px;">
-      <a style="padding: 10px;" href="#"> login </a>
-      <a href="#">signup</a>
+      <!-- <a style="padding: 10px;" href="#"> login </a>
+      <a href="#">signup</a> -->
+      <img src="https://lh3.googleusercontent.com/ogw/ADGmqu_VZjqel-SWjocK_AAglVGk2Yk-dHHS-Vl2oAtCMA=s83-c-mo" style="border-radius: 50%;" height="35px" width="35px" alt="">
     </div>
 
   </nav>
@@ -46,17 +47,17 @@
       <div class="col-md-3"> </div>
       <div class="col-md-6 quiz-box">
         <div id="question">
-          <!-- Q What is the capital of india -->
+          What is the capital of india
         </div>
         <div id="options">
           <div class="option" onclick="select(this)">
-            <!-- Wuhan -->
+            Wuhan
           </div>
           <div class="option" onclick="select(this)">
-            <!-- Lahore -->
+            Lahore
           </div>
           <div class="option" onclick="select(this)">
-            <!-- Gujarat -->
+            Gujarat
           </div>
         </div>
       </div>
@@ -101,15 +102,19 @@
               <button style="padding:10px 15px" onclick="save(this)">Save</button>
             </div>
           </div>
+          <div class="row" style="margin-top: 40px; margin-left: 100px; display: flex;
+          justify-content: center">
+            <button style="background-color:rgb(255, 115, 115); padding:10px 10px" onclick="result()">
+              Result
+            </button>
+            <div id="result"></div>
+          </div>
         </div>
       </div>
     </div>
 
 
-<button onclick="result()">
-  Result
-</button>
-<div id="result"></div>
+
   </div>
 
   </div>

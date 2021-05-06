@@ -231,5 +231,6 @@ function result(){
  
   x = document.getElementById("result")
   x.innerText = ` Your score is ${correct}`
+  localStorage.setItem("result", correct);
   console.log("Result : ", correct)
 }
