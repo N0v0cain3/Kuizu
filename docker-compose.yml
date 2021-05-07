@@ -4,7 +4,7 @@ services:
         build:
             context: ./backend
         ports:
-            - 
+            - "3000:3000"
     nginx:
         restart: always
         build:
