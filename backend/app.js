@@ -58,7 +58,7 @@ app.use(cors());
 
 // ADD ROUTERS
 
-// app.use("/user", require("./api/routers/user"));
+app.use("/user", require("./api/routers/user"));
 
 
 
