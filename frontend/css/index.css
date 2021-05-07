@@ -289,3 +289,21 @@ body {
   background-color: #b6b6b62f;
   border-radius: 10px;
 }
+
+
+
+.overlay{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffbfb;
+  z-index: 9999;
+
+}
+
+.display-content{
+  display: none;
+}

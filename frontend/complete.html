@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="./css/index.css">
 
 </head>
-<body  onload="showResult()">
+<body  onload=" preload(); showResult()">
   <!-- Just an image -->
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
@@ -24,7 +24,10 @@
 </div>
 
 </nav>
-  <div class="container">
+<div class="success-loader overlay" id="preload">
+  <img src="./assets/200.gif" alt="">
+</div>
+  <div class="container" id="lol">
     <div class="row">
       <div class="justify-content-left  row col-md-6">
         <div id="result-box">
@@ -59,6 +62,17 @@
   </div>
   
 </body>
+<script>
+function preload(){
+  x = document.querySelectorAll("#lol")[0]
+  y = document.getElementById("preload")
+  console.log(x)
+setTimeout(()=>{
+  //x.classList.remove("display-content")
+  y.classList.add("display-content")
+},2000)
+}
+</script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 <script src="./js/script.js"></script>

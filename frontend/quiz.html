@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/index.css">
-  <!-- <script src="https://webgazer.cs.brown.edu/webgazer.js?" defer></script> -->
+  <script src="https://webgazer.cs.brown.edu/webgazer.js?" defer></script>
   <script src="./js/script.js" defer></script>
   <title>Kuizu</title>
   <style>
@@ -26,7 +26,8 @@
     <div class="navbar-right" style="padding: 5px; margin: 20px;">
       <!-- <a style="padding: 10px;" href="#"> login </a>
       <a href="#">signup</a> -->
-      <img src="https://lh3.googleusercontent.com/ogw/ADGmqu_VZjqel-SWjocK_AAglVGk2Yk-dHHS-Vl2oAtCMA=s83-c-mo" style="border-radius: 50%;" height="35px" width="35px" alt="">
+      <img src="https://lh3.googleusercontent.com/ogw/ADGmqu_VZjqel-SWjocK_AAglVGk2Yk-dHHS-Vl2oAtCMA=s83-c-mo"
+        style="border-radius: 50%;" height="35px" width="35px" alt="">
     </div>
 
   </nav>
@@ -59,6 +60,19 @@
           <div class="option" onclick="select(this)">
             Gujarat
           </div>
+        </div>
+        <div style="display: flex;">
+          <button style="background: #D3544B;
+              width:300px;
+              margin:auto;
+              margin-top: 5px;
+              padding:10px;
+              border-radius:10px;
+              border:none;
+              outline:none;
+              cursor:pointer;
+              color:white;
+              text-transform: uppercase;" onclick="save(this)">Save</button>
         </div>
       </div>
       <div class="col-md-3">
@@ -99,15 +113,18 @@
             <div style="margin-top: 80px; margin-left: 100px; display: flex;
             justify-content: center;
             align-items: center;" class="">
-              <button style="padding:10px 15px" onclick="save(this)">Save</button>
+              <button style="background:#2ea100;
+              width:300px;
+              margin:auto;
+              margin-top: 5px;
+              padding:10px;
+              border-radius:10px;
+              border:none;
+              outline:none;
+              cursor:pointer;
+              color:white;
+              text-transform: uppercase;" onclick="result()">Result</button>
             </div>
-          </div>
-          <div class="row" style="margin-top: 40px; margin-left: 100px; display: flex;
-          justify-content: center">
-            <button style="background-color:rgb(255, 115, 115); padding:10px 10px" onclick="result()">
-              Result
-            </button>
-            <div id="result"></div>
           </div>
         </div>
       </div>
@@ -120,7 +137,8 @@
   </div>
 </body>
 <script>
- 
+
   var answers = []
 </script>
+
 </html>
