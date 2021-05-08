@@ -323,7 +323,7 @@ body {
   box-shadow: 3px 3px 2px rgba(216,0,39,0.6);
 }
 .left{
-  width:40%;
+  width:30%;
   border-radius: 20px;
 }
 .left>div{
@@ -385,7 +385,7 @@ body {
 }
 .right{
   background:#FFFFFF;
-  width:60%;
+  width:70%;
   padding:2%;
   box-sizing: border-box;
   border-radius: 5px;
