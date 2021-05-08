@@ -359,30 +359,6 @@ body {
 .details>div>p{
   font-size:1.2vw;
 }
-.details>div>svg{
-  color:#FFFFFF;
-  margin:3%;
-  /* vertical-align: bottom; */
-  margin-top:5%;
-}
-.socialIcons{
-  width:70%;
-  margin:auto;
-  display: flex;
-  justify-content: space-between;
-}
-.socialIcons>a>svg{
-  color:#FFFFFF;
-  /* margin-top:25%; */
-  border-radius: 50%;
-  padding:5px;
-  transition:all 0.2s ease-in ;
-  cursor:pointer;
-}
-.socialIcons>a>svg:hover{
-  background:#FFFFFF;
-  color:black;
-}
 .right{
   background:#FFFFFF;
   width:70%;
@@ -473,10 +449,6 @@ body {
   outline:none;
   font-size:1.5vw;
 }
-.send>svg{
-  margin-left:2vh;
-  vertical-align: bottom;
-}
 .query{
   display:flex;
   flex-direction: row;
@@ -514,24 +486,4 @@ input[type="radio"]:checked{
 }
 input[type="radio"]:focus{
   outline:none;
-}
-.thanks{
-  display:flex;
-  padding:0 3%;
-  float:right;
-  margin-top:2%;
-  background:var(--primary-color);
-  border:none;
-  border-radius: 5px;
-  color:#FFFFFF;
-  outline:none;
-  font-size:1.5vw;
-  user-select: none;
-  cursor:not-allowed;
-}
-.thanks>p{
-  font-size:1.5vw;
-  font-weight:600;
-  padding:2px;
-  margin:2px;
 }
