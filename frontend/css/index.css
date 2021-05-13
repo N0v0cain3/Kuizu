@@ -522,12 +522,12 @@ input[type="radio"]:focus{
   color:white;
   border-radius:2px;
 }
-.questionContainer>div{
+.item{
   display:flex;
   justify-content: space-between;
   margin:2% 0%;
 }
-.questionContainer>div>div>i{
+.trash{
   color:red;
 }
 .quizBtn>button,.modal-main>div>button{
@@ -592,7 +592,7 @@ textarea{
   justify-content: flex-end !important;
 }
 .modal-main>div>button{
-  width:50%;
+  width:40%;
   margin-top:5%;
   padding:2%;
   float:right !important;

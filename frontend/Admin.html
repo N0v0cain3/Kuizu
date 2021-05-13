@@ -35,32 +35,18 @@
               <button onclick="show()">+ Add Question </button>
           </div>
           <div class="questionContainer">
-            <div>
-                <div>
+            <div class="item">
+                <div class="question">
                     <p>Hello, what is your name ?  I'm mounvi </p>
-                    <div>
+                    <div class="options">
                         <p>A. Option A</p>
                         <p>A. Option A</p>
                         <p>A. Option A</p>
                         <p>A. Option A</p>
                     </div>
                 </div>
-                <div>
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <p>Hello, what is your name ?  I'm mounvi </p>
-                    <div>
-                        <p>A. Option A</p>
-                        <p>A. Option A</p>
-                        <p>A. Option A</p>
-                        <p>A. Option A</p>
-                    </div>
-                </div>
-                <div>
-                    <i class="fa fa-trash" aria-hidden="true"></i>
+                <div class="trash">
+                    <i class="fa fa-trash"></i>
                 </div>
             </div>
           </div>
@@ -89,9 +75,64 @@
     </div>
     <script>
         var modal = document.getElementById("modal");
+        var questionContainer = document.getElementsByClassName('questionContainer')[0];
+
         function show(){
             modal.classList.contains("display-none") ? modal.classList.replace("display-none","display-block") : modal.classList.replace("display-block","display-none");
         }
+        var questions = [
+            {
+            question:"Hello there",
+            options:{
+                option1:"Option 1",
+                option2:"Option 2",
+                option3:"Option 3",
+                option4:"Option 4"
+            }
+        },
+    ]
+
+        function build(){
+            questionContainer.textContent='';
+        questions.forEach(element => {
+            const questionItem = document.createElement("div");
+            questionItem.classList.add('item');
+
+            const option1 = document.createElement("p");
+            option1.textContent=`A. ${element.options.option1}`;
+            const option2 = document.createElement("p");
+            option2.textContent=`B. ${element.options.option2}`;
+            const option3 = document.createElement("p");
+            option3.textContent=`C. ${element.options.option3}`;
+            const option4 = document.createElement("p");
+            option4.textContent=`D. ${element.options.option4}`;
+
+            const options = document.createElement("div");
+            options.classList.add('options');
+            options.append(option1,option2,option3,option4);
+
+            const qDescrip = document.createElement("p");
+            qDescrip.textContent = element.question;
+
+            const question = document.createElement("div");
+            question.classList.add('question');
+
+            question.append(qDescrip,options);
+
+            const closeIcon = document.createElement('i');
+            closeIcon.classList.add('fa','fa-trash');
+
+            const closeContainer = document.createElement("div");
+            closeContainer.classList.add('trash');
+            closeContainer.appendChild(closeIcon);
+
+            questionItem.append(question,closeContainer);
+            questionContainer.appendChild(questionItem);
+        });
+        }
+
+        build();
+
     </script>
 </body>
 </html>
