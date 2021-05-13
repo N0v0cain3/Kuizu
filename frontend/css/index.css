@@ -503,7 +503,7 @@ input[type="radio"]:focus{
 .adminHeader{
   text-align:center;
 }
-.adminHeader>h2,.adminHeader>p,.adminHeader2>h3{
+.adminHeader>h2,.adminHeader>p,.adminHeader2>h3,.modal-main>h4{
   font-weight:600;
 }
 .adminHeader2{
@@ -566,29 +566,26 @@ input[type="radio"]:focus{
   justify-content: center;
   align-items: center;
 } 
-.display-block {
-  display: block;
-} 
 .display-none {
   display: none;
 }
+.display-block {
+  display: block;
+} 
 textarea{
   vertical-align: middle;
   resize: none;
   width:70%;
+  border:1px solid black;
+  border-radius: 5px;
+  padding:2%;
+  outline:none;
 }
 .modal-main>div{
   display:flex;
   justify-content: space-between;
   width:100%;
   margin:2% 0%;
-}
-.modal-main>div>input{
-  width:70%;
-  background:transparent;
-  border:none;
-  outline:none;
-  border-bottom: 1px solid black;
 }
 .post{
   display:flex;
@@ -599,4 +596,9 @@ textarea{
   margin-top:5%;
   padding:2%;
   float:right !important;
+}
+.modal-main>i{
+  position:absolute;
+  right:5%;
+  top:5%;
 }

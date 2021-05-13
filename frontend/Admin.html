@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
     <title>Admin - KUIZU</title>
@@ -31,7 +32,7 @@
           </div>
           <div class="adminHeader2">
               <h3>Questionaire : </h3>
-              <button>+ Add Question </button>
+              <button onclick="show()">+ Add Question </button>
           </div>
           <div class="questionContainer">
             <div>
@@ -67,16 +68,17 @@
               <button>Save Quiz</button>
               <button>Post Quiz</button>
           </div>
-          <div class="modal display-block">
+          <div class="modal display-none" id="modal">
               <div class="modal-main">
+                <i class="fa fa-times" onclick="show()" aria-hidden="true"></i>
                 <h4>Add Question</h4>
                 <div>
                     <label>Statement : </label>
-                    <textarea></textarea>
+                    <textarea placeholder="Enter the question here"></textarea>
                 </div>
                 <div>
                     <label>Options : </label>
-                    <textarea></textarea>
+                    <textarea placeholder="Enter 4 options in 4 lines"></textarea>
                 </div>
                 <div class="post">
                     <button>Post Question</button>
@@ -85,5 +87,11 @@
           </div>
       </div>
     </div>
+    <script>
+        var modal = document.getElementById("modal");
+        function show(){
+            modal.classList.contains("display-none") ? modal.classList.replace("display-none","display-block") : modal.classList.replace("display-block","display-none");
+        }
+    </script>
 </body>
 </html>
