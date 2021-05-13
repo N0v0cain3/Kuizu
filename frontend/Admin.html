@@ -60,17 +60,17 @@
                 <h4>Add Question</h4>
                 <div class="stmt">
                     <label>Statement</label>
-                    <textarea placeholder="Enter the question here"></textarea>
+                    <textarea placeholder="Enter the question here" id="description"></textarea>
                 </div>
                 <div>
                     <label>Options : </label>
-                    <input placeholder="Enter your option"></input>
+                    <input placeholder="Enter your option" id="options" type="text"></input>
                     <div class="add">
-                        <button>+</button>
+                        <button onclick="addOptions()">+</button>
                     </div>
                 </div>
                 <div class="post">
-                    <button>Post Question</button>
+                    <button onclick="addQuestion()">Post Question</button>
                 </div>
               </div>
           </div>
@@ -79,6 +79,10 @@
     <script>
         var modal = document.getElementById("modal");
         var questionContainer = document.getElementsByClassName('questionContainer')[0];
+        var description = document.getElementById("description");
+        var options = document.getElementById("options");
+
+        let opt,optionsArray=[];
 
         function show(){
             modal.classList.contains("display-none") ? modal.classList.replace("display-none","display-block") : modal.classList.replace("display-block","display-none");
@@ -86,29 +90,30 @@
         var questions = [
             {
             question:"Hello there",
-            options:{
-                option1:"Option 1",
-                option2:"Option 2",
-                option3:"Option 3",
-                option4:"Option 4"
-            }
+            options:[
+                "Option 1",
+                "Option 2",
+                "Option 3",
+                "Option 4"
+            ]
         },
     ]
 
-        function build(){
-            questionContainer.textContent='';
+    function build(){
+        questionContainer.textContent='';
+        console.log(questions);
         questions.forEach(element => {
             const questionItem = document.createElement("div");
             questionItem.classList.add('item');
 
             const option1 = document.createElement("p");
-            option1.textContent=`A. ${element.options.option1}`;
+            option1.textContent=`A. ${element.options[0]}`;
             const option2 = document.createElement("p");
-            option2.textContent=`B. ${element.options.option2}`;
+            option2.textContent=`B. ${element.options[1]}`;
             const option3 = document.createElement("p");
-            option3.textContent=`C. ${element.options.option3}`;
+            option3.textContent=`C. ${element.options[2]}`;
             const option4 = document.createElement("p");
-            option4.textContent=`D. ${element.options.option4}`;
+            option4.textContent=`D. ${element.options[3]}`;
 
             const options = document.createElement("div");
             options.classList.add('options');
@@ -133,6 +138,22 @@
             questionContainer.appendChild(questionItem);
         });
         }
+
+        function addOptions() {
+            optionsArray.push(options.value);
+            options.value=''
+        }
+        function addQuestion() {
+            const q = {
+                question:description.value,
+                options:optionsArray
+            }
+            questions.push(q);
+            description.value='';
+            show();
+            build();
+        }
+        //On load
         build();
 
     </script>

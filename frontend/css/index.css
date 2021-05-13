@@ -581,6 +581,9 @@ textarea,.modal-main>div>input{
   padding:2%;
   outline:none;
 }
+.modal-main>div>input{
+  padding:0% 1% !important;
+}
 .stmt{
   display:flex;
 }
