@@ -58,13 +58,16 @@
               <div class="modal-main">
                 <i class="fa fa-times" onclick="show()" aria-hidden="true"></i>
                 <h4>Add Question</h4>
-                <div>
-                    <label>Statement : </label>
+                <div class="stmt">
+                    <label>Statement</label>
                     <textarea placeholder="Enter the question here"></textarea>
                 </div>
                 <div>
                     <label>Options : </label>
-                    <textarea placeholder="Enter 4 options in 4 lines"></textarea>
+                    <input placeholder="Enter your option"></input>
+                    <div class="add">
+                        <button>+</button>
+                    </div>
                 </div>
                 <div class="post">
                     <button>Post Question</button>
@@ -130,7 +133,6 @@
             questionContainer.appendChild(questionItem);
         });
         }
-
         build();
 
     </script>

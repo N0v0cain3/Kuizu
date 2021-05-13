@@ -530,7 +530,7 @@ input[type="radio"]:focus{
 .trash{
   color:red;
 }
-.quizBtn>button,.modal-main>div>button{
+.quizBtn>button,.post>button,.add>button{
   background:rgba(221, 34, 68, 0.5);
   height:max-content;
   padding:1% 3%;
@@ -572,7 +572,7 @@ input[type="radio"]:focus{
 .display-block {
   display: block;
 } 
-textarea{
+textarea,.modal-main>div>input{
   vertical-align: middle;
   resize: none;
   width:70%;
@@ -580,6 +580,12 @@ textarea{
   border-radius: 5px;
   padding:2%;
   outline:none;
+}
+.stmt{
+  display:flex;
+}
+textarea{
+  flex-grow: 1;
 }
 .modal-main>div{
   display:flex;
@@ -589,16 +595,19 @@ textarea{
 }
 .post{
   display:flex;
-  justify-content: flex-end !important;
+  justify-content: center !important;
 }
-.modal-main>div>button{
-  width:40%;
-  margin-top:5%;
-  padding:2%;
-  float:right !important;
+.post>button{
+  width:80%;
+  margin-top:1%;
+  padding:3%;
+  /* float:right !important; */
 }
 .modal-main>i{
   position:absolute;
   right:5%;
   top:5%;
+}
+.add>button{
+  padding:10px;
 }
