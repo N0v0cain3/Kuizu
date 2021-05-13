@@ -64,10 +64,12 @@
                 </div>
                 <div>
                     <label>Options : </label>
-                    <input placeholder="Enter your option" id="options" type="text"></input>
                     <div class="add">
                         <button onclick="addOptions()">+</button>
                     </div>
+                </div>
+                <input placeholder="Enter your option" id="options" type="text"></input>
+                <div class="modalOptions" id='modalOptions'>
                 </div>
                 <div class="post">
                     <button onclick="addQuestion()">Post Question</button>
@@ -81,6 +83,7 @@
         var questionContainer = document.getElementsByClassName('questionContainer')[0];
         var description = document.getElementById("description");
         var options = document.getElementById("options");
+        const optCon = document.getElementById('modalOptions');
 
         let opt,optionsArray=[];
 
@@ -141,7 +144,15 @@
 
         function addOptions() {
             optionsArray.push(options.value);
-            options.value=''
+            options.value='';
+
+            optCon.textContent='';
+
+            optionsArray.forEach((option,index)=>{
+                const opt = document.createElement('p');
+                opt.textContent= `${index+1}. ${option}`;
+                optCon.append(opt);
+            })
         }
         function addQuestion() {
             const q = {
