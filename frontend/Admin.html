@@ -104,7 +104,6 @@
 
     function build(){
         questionContainer.textContent='';
-        console.log(questions);
         questions.forEach(element => {
             const questionItem = document.createElement("div");
             questionItem.classList.add('item');
@@ -132,6 +131,7 @@
 
             const closeIcon = document.createElement('i');
             closeIcon.classList.add('fa','fa-trash');
+            closeIcon.setAttribute('onclick', `deleteQuestion('${element.question}')`);
 
             const closeContainer = document.createElement("div");
             closeContainer.classList.add('trash');
@@ -161,8 +161,19 @@
             }
             questions.push(q);
             description.value='';
+            optCon.textContent='';
+            optionsArray=[];
+
             show();
             build();
+        }
+        function deleteQuestion(question){
+            questions.forEach((q,i)=>{
+            if(q.question===question){
+                questions.splice(i,1);
+            }
+            build();
+        });
         }
         //On load
         build();
