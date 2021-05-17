@@ -490,7 +490,7 @@ input[type="radio"]:focus{
 
 /* admin portal */
 .adminContainer{
-  background:rgba(216, 216, 216, 0.3);
+  background:rgb(241, 241, 241);
   width:70%;
   margin:2% auto;
   border-radius:10px;
@@ -552,7 +552,7 @@ input[type="radio"]:focus{
 .modal-main {
   z-index:25;
   position:fixed;
-  background:#E88A9B;
+  background:#f1adba;
   width: 30%;
   height: auto;
   top:50%;
@@ -572,11 +572,11 @@ input[type="radio"]:focus{
 .display-block {
   display: block;
 } 
-textarea,#options{
+textarea,#options,.inputBox>input{
   vertical-align: middle;
   resize: none;
   width:100%;
-  border:1px solid black;
+  border:1px solid rgb(85, 85, 85);
   border-radius: 5px;
   padding:2%;
   outline:none;
@@ -618,4 +618,13 @@ textarea{
 .modalOptions{
   display:flex;
   flex-direction: column;
+}
+.inputBox{
+  margin:4% 0%;
+  width:100%;
+  flex-direction: column;
+  display:flex;
+}
+.inputBox>input{
+  padding:3%;
 }
