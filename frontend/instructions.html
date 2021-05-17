@@ -31,11 +31,28 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur impedit ipsam, esse laudantium officia eos soluta dolorem? Odio sequi</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ut perferendis voluptatum expedita quod laboriosam accusantium mollitia esse ratione hic</p>
               </div>
-              <button>Start&nbsp;&nbsp;Test</button>
+              <div>
+                <input type="checkbox" id='checkboxTerms' onchange="handleChange()"></input>
+                <label>I have read the Instructions and Agree to the Terms and Condition</label>
+              </div>
+              <div style="display:flex;justify-content: center;">
+                <button id="instructionsBtn" type="button" class="disabled-btn">Start&nbsp;&nbsp;Test</button>
+              </div>
           </div>
           <div>
               <img src="../frontend/assets/Saly-26.png"/>
           </div>
     </div>
+    <script>
+      var checkbox = document.getElementById("checkboxTerms");
+      var btn = document.getElementById("instructionsBtn");
+      handleChange = () => {
+        if(event.target.checked){
+          btn.classList.add("enable-btn")
+        } else {
+          btn.classList.remove("enable-btn")
+        }
+       }
+    </script>
 </body>
 </html>

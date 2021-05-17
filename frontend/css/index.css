@@ -197,7 +197,7 @@ body {
 .instructions>div>div>p{
   color:white;
 }
-.instructions>div>button{
+.instructions>div>div>button{
   background: #D3544B;
   width:30%;
   margin:auto;
@@ -209,6 +209,12 @@ body {
   cursor:pointer;
   color:white;
   text-transform: uppercase;
+}
+.disabled-btn{
+  cursor:not-allowed !important;
+}
+.enable-btn{
+  cursor:pointer !important;
 }
 /* selection */
 .selection{
