@@ -37,5 +37,16 @@
               <img src="../frontend/assets/Saly-26.png"/>
           </div>
     </div>
+    <script>
+      var checkbox = document.getElementById("checkboxTerms");
+      var btn = document.getElementById("instructionsBtn");
+      handleChange = () => {
+        if(event.target.checked){
+          btn.classList.add("enable-btn")
+        } else {
+          btn.classList.remove("enable-btn")
+        }
+       }
+    </script>
 </body>
 </html>

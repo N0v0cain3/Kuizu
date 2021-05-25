@@ -71,6 +71,10 @@
                 <input placeholder="Enter your option" id="options" type="text"></input>
                 <div class="modalOptions" id='modalOptions'>
                 </div>
+                <div class="inputBox">
+                    <label>Enter the Correct Option Index : </label>
+                    <input placeholder="Ex. A" id="correctOption" type="text"></input>
+                </div>
                 <div class="post">
                     <button onclick="addQuestion()">Post Question</button>
                 </div>
@@ -84,6 +88,7 @@
         var description = document.getElementById("description");
         var options = document.getElementById("options");
         const optCon = document.getElementById('modalOptions');
+        var correctOption = document.getElementById('correctOption');
 
         let opt,optionsArray=[];
 
@@ -98,13 +103,14 @@
                 "Option 2",
                 "Option 3",
                 "Option 4"
-            ]
+            ],
+            correctOption:'a'
         },
     ]
 
     function build(){
         questionContainer.textContent='';
-        questions.forEach(element => {
+        questions.forEach((element,index) => {
             const questionItem = document.createElement("div");
             questionItem.classList.add('item');
 
@@ -117,12 +123,20 @@
             const option4 = document.createElement("p");
             option4.textContent=`D. ${element.options[3]}`;
 
+            let correct = element.correctOption.toLowerCase();
+
+            correct === 'a' ? option1.style.color="#E88A9B" : 
+                correct === 'b' ? option2.style.color="#E88A9B" : 
+                    correct === 'c' ? option3.style.color="#E88A9B" : 
+                        option4.style.color="#E88A9B";
+            
             const options = document.createElement("div");
             options.classList.add('options');
             options.append(option1,option2,option3,option4);
 
             const qDescrip = document.createElement("p");
-            qDescrip.textContent = element.question;
+            qDescrip.textContent = `${index+1}. ${element.question}`;
+            qDescrip.style.fontWeight = 800;
 
             const question = document.createElement("div");
             question.classList.add('question');
@@ -157,12 +171,14 @@
         function addQuestion() {
             const q = {
                 question:description.value,
-                options:optionsArray
+                options:optionsArray,
+                correctOption:correctOption.value
             }
             questions.push(q);
             description.value='';
             optCon.textContent='';
             optionsArray=[];
+            correctOption.value='';
 
             show();
             build();
