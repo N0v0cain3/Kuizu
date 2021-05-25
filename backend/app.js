@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const path = require("path")
 const helmet = require("helmet");
 const cors = require("cors");
 const rateLimit = require("express-rate-limit");
@@ -53,8 +54,6 @@ app.use((req, res, next) => {
 });
 
 app.use(cors());
-
-
 
 // ADD ROUTERS
 
