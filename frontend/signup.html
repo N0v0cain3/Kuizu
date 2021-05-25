@@ -21,19 +21,19 @@
           <h3>Sign Up</h3>
           <div>
             <label>Name</label>
-            <input type="text" placeholder="Enter your Full Name"/>
+            <input type="text" id="name" placeholder="Enter your Full Name"/>
           </div>
           <div>
             <label>E-Mail ID</label>
-            <input type="email" placeholder="Enter your E-Mail ID"/>
+            <input type="email" id="email" placeholder="Enter your E-Mail ID"/>
           </div>
           <div>
             <label>Password</label>
-            <input placeholder="Enter Your Password"/>
+            <input placeholder="Enter Your Password" id="password"/>
           </div>
           <div>
-            <button>Sign Up</button>
-            <p>Already have an account? <a href="login.html"><span>Login</span></a></p>
+            <button type="button" id="signup" onclick="register()">Sign Up</button>
+            <p>Already have an account? <a href="login.html" ><span>Login</span></a></p>
           </div>
         </div>
       </div>
@@ -42,5 +42,9 @@
       </div>
     </div>
   </div>
+
+     <script src="js/login.js"></script>
+    
+
 </body>
 </html>
