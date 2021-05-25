@@ -21,14 +21,14 @@
           <h3>Login</h3>
           <div>
             <label>E-Mail ID</label>
-            <input type="email" placeholder="Enter your E-Mail ID"/>
+            <input type="email" id="email" placeholder="Enter your E-Mail ID"/>
           </div>
           <div>
             <label>Password</label>
-            <input placeholder="Enter Your Password"/>
+            <input placeholder="Enter Your Password" id="password"/>
           </div>
           <div>
-            <button>Login</button>
+            <button onclick="login()">Login</button>
             <p>Don't have an account? <a href="signup.html"><span>Signup</span></a></p>
           </div>
         </div>
@@ -38,5 +38,7 @@
       </div>
     </div>
   </div>
+
+  <script src="js/login.js"></script>
 </body>
 </html>
