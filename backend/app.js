@@ -7,7 +7,7 @@ const cors = require("cors");
 const rateLimit = require("express-rate-limit");
 const User = require("./api/models/user");
 require("dotenv").config();
-
+const Info = require("./api/models/info")
 const database = require("./config/database");
 
 const logResponseBody = require("./utils/logResponse");
@@ -15,7 +15,14 @@ const logResponseBody = require("./utils/logResponse");
 
 var app = require("express")();
 var http = require("http").Server(app);
-var io = require("socket.io")(http);
+const io = require("socket.io")(http, {
+  cors: {
+    origin: "http://127.0.0.1:5500",
+    methods: ["GET", "POST"]
+  }
+});
+
+
 
 app.set("trust proxy", 1);
 var limiter = new rateLimit({
@@ -100,7 +107,6 @@ function sendHeartbeat() {
 io.on("connection", (sc) => {
   console.log(`Socket ${sc.id} connected.`);
 
-  io.sockets.emit("connect", `Socket ${sc.id} connected.`);
   sc.on("pong", function (data) {
     console.log("Pong received from client");
   });
@@ -108,19 +114,15 @@ io.on("connection", (sc) => {
     console.log(`Socket ${sc.id} disconnected.`);
   });
 
-  sc.on("like", async (userId, teamId) => {
-    await Like.updateOne(
-      { teamId },
-      { $addToSet: { likes: userId } },
-      { new: true }
-    )
-      .then((result) => {
-        // console.log(result)
-        io.sockets.emit("count", { teamId: result.likes.length });
+  sc.on("data", async (data) => {
+    const info = new Info({
+      _id:  new mongoose.Types.ObjectId,
+      info:data
+    })
+    info.save()
+      .then(()=>{
+        console.log(info)
       })
-      .catch((e) => {
-        console.log(e.toString());
-      });
   });
   setTimeout(sendHeartbeat, 8000);
 });

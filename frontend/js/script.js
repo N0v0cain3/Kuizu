@@ -1,3 +1,9 @@
+const socket = io("http://localhost:3000");
+  
+socket.on("hello", () => {
+console.log("connected"); // world
+});
+
 window.saveDataAcrossSessions = true
 
 const LOOK_DELAY = 2000 // 1 second
@@ -36,11 +42,13 @@ webgazer
       if (lookDirection === "LEFT") {
        playAudio()
         alert("stop looking around")
-       
+       socket.emit("data","left")
 
       } else {
         playAudio()
         alert("stop looking around")
+        socket.emit("data","right")
+
       }
 
       startLookTime = Number.POSITIVE_INFINITY
@@ -241,3 +249,4 @@ function showResult() {
   correct = localStorage.getItem("result")
   x.innerText = `${correct} points`
 }
+
