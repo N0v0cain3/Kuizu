@@ -165,6 +165,23 @@ function close_stream() {
 
 function detectFrame() {
     model.detect(video).then(predictions => {
+        if(predictions[0])
+      { 
+           console.log(predictions[0].class)
+
+        if(predictions[0].class!="person"){
+            if(predictions[0].class=="cell phone"){
+                alert(`Dont use ${predictions[0].class}`)
+            }
+            else{
+                alert(`${predictions[0].class} detected`)
+
+            }
+        }
+        if(predictions[0].class=="person"){
+        document.getElementById('proceed').disabled = false;
+        }
+      }
         drawVideoPredictions(predictions)
         if (video.srcObject.active) {
             requestAnimationFrame(detectFrame)
@@ -197,3 +214,9 @@ function load_webcam() {
             $.toaster({ settings: { timeout: 5000 }, title: '', message: 'Error: Could not retrive webcam feed', priority: 'danger' });
         })
 }
+
+
+// function show(value){
+//      document.getElementById("displayobject").innerHTML(`<h3>${value}<h3>`)
+
+// }
