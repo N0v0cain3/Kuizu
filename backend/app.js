@@ -65,6 +65,7 @@ app.use(cors());
 // ADD ROUTERS
 
 app.use("/user", require("./api/routers/user"));
+app.use("/quiz", require("./api/routers/quiz"));
 
 
 
