@@ -1,5 +1,6 @@
 function getquiz() {
     var jwt = localStorage.getItem('JWT_Token')
+    const name= localStorage.getItem('NAME')
     console.log(jwt)
     var xh = new XMLHttpRequest();
     xh.open("GET", "http://localhost:3000/quiz/view?id=60af86175a5fdb67969188e6", true)
@@ -13,6 +14,7 @@ function getquiz() {
             console.log(data.quiz)
             const newdata = data.quiz
             console.log(newdata.questions)
+            $('#useritem').append(` <p>Logged In as:</p><p><b>${name}</b></p>`)
             for (var i = 0; i < newdata.questions.length; i++) {
                 
                 $('#questionContainer').append(`<div class="item">
