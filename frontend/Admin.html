@@ -12,15 +12,14 @@
     <link rel="stylesheet" href="./css/index.css">
     <title>Admin - KUIZU</title>
 </head>
-<body>
+<body onload="getuser()">
     <nav class="navbar navI navbar-light bg-light">
         <a class="navbar-brand" href="#">
           <img src="../frontend/assets/logo.png" width="" height="50" alt="50">
         </a>
       <div class="navbar-right user" style="padding: 5px; margin: 10px;">
-        <div>
-            <p>Logged In as:</p>
-            <p><b>John Doe</b></p>
+        <div id="useritem">
+            
         </div>
         <img src="../frontend/assets/pic.png"/>
       </div>
@@ -42,7 +41,6 @@
                         <p>A. Option A</p>
                         <p>A. Option A</p>
                         <p>A. Option A</p>
-                        <p>A. Option A</p>
                     </div>
                 </div>
                 <div class="trash">
@@ -52,7 +50,7 @@
           </div>
           <div class="quizBtn">
               <button>Save Quiz</button>
-              <button>Post Quiz</button>
+              <button onclick="window.location.href='AdminView.html'">Post Quiz</button>
           </div>
           <div class="modal display-none" id="modal">
               <div class="modal-main">
@@ -97,12 +95,11 @@
         }
         var questions = [
             {
-            question:"Hello there",
+            question:"Question title",
             options:[
                 "Option 1",
                 "Option 2",
                 "Option 3",
-                "Option 4"
             ],
             correctOption:'a'
         },
@@ -120,8 +117,7 @@
             option2.textContent=`B. ${element.options[1]}`;
             const option3 = document.createElement("p");
             option3.textContent=`C. ${element.options[2]}`;
-            const option4 = document.createElement("p");
-            option4.textContent=`D. ${element.options[3]}`;
+            
 
             let correct = element.correctOption.toLowerCase();
 
@@ -132,7 +128,7 @@
             
             const options = document.createElement("div");
             options.classList.add('options');
-            options.append(option1,option2,option3,option4);
+            options.append(option1,option2,option3);
 
             const qDescrip = document.createElement("p");
             qDescrip.textContent = `${index+1}. ${element.question}`;
@@ -195,5 +191,6 @@
         build();
 
     </script>
+     <script src="./js/login.js"></script>
 </body>
 </html>

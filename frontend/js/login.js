@@ -33,7 +33,9 @@ function login() {
     xh.onload = function () {
         if (this.status == 200) {
             var data = JSON.parse(this.responseText)
+            
             localStorage.setItem("JWT_Token", "JWT " + data.token)
+            localStorage.setItem("NAME" , data.userDetails.name)
             window.location.replace('selection.html')
         }
         else {
@@ -45,7 +47,7 @@ function login() {
 
 function getuser() {
     var jwt = localStorage.getItem('JWT_Token')
-    console.log(jwt)
+    const name= localStorage.getItem('NAME')
     var xh = new XMLHttpRequest();
     xh.open("GET", "http://localhost:3000/user/login", true)
     xh.setRequestHeader('Content-Type', 'application/json')
@@ -53,13 +55,9 @@ function getuser() {
     xh.send()
     xh.onload = function () {
         if (this.status == 200) {
-            var data = JSON.parse(this.responseText)
-            for (var i = 0; i < data.user.length; i++) {
-                
-                $('#useritem').append(` <p>Logged In as:</p><p><b>${data.user[i].name}</b></p>`)
-            }
-            console.log(data.user[i].name)
-
+         
+                $('#useritem').append(` <p>Logged In as:</p><p><b>${name}</b></p>`)
+       
         }
         else if(this.status==400){
             alert('Error in getting items')
