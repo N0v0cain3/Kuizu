@@ -1,8 +1,28 @@
 const socket = io("http://localhost:3000");
+let users = []
   
-socket.on("hello", () => {
-console.log("connected"); // world
+socket.on("connect", ( ) => {
+  socket.emit("user","60ae81dbbf8ca23d9ed4a862")
+console.log(socket.id); // world
 });
+
+socket.on("start",(name)=>{
+   document.getElementById("user").innerHTML = `${name} started the test`
+   users.append({name:name,id:socket.id})
+})
+
+socket.on('disconnected', function() {
+
+  socket.emit('DelPlayer', person_name);
+
+});
+
+socket.on("start",(name)=>{
+  document.getElementById("user").innerHTML = `${name} started the test`
+})
+
+
+
 
 window.saveDataAcrossSessions = true
 
@@ -249,4 +269,5 @@ function showResult() {
   correct = localStorage.getItem("result")
   x.innerText = `${correct} points`
 }
+
 
