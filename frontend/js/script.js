@@ -12,7 +12,7 @@ const RIGHT_CUTOFF = window.innerWidth - window.innerWidth / 4
 
 let startLookTime = Number.POSITIVE_INFINITY
 let lookDirection = null
-
+let error=0;
 
 webgazer
   .setGazeListener((data, timestamp) => {
@@ -43,14 +43,19 @@ webgazer
        playAudio()
         alert("stop looking around")
        socket.emit("data","left")
+       error++;
 
       } else {
         playAudio()
         alert("stop looking around")
         socket.emit("data","right")
+        error++;
 
       }
-
+      console.log(error)
+      if(error > 3 ){
+        window.location.replace('block.html')
+      }
       startLookTime = Number.POSITIVE_INFINITY
       lookDirection = "STOP"
       setTimeout(() => {
@@ -59,7 +64,7 @@ webgazer
     }
   })
   .begin()
-
+  
 
   function playAudio() {
     var x = document.getElementById("myAudio"); 
