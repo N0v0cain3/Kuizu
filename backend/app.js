@@ -105,8 +105,13 @@ function sendHeartbeat() {
   io.sockets.emit("ping", { beat: 1 });
 }
 
-io.on("connection", (sc) => {
+io.on("connection", async (sc) => {
   console.log(`Socket ${sc.id} connected.`);
+  sc.on("user",async (id)=>{
+    const {name} = await User.findById(id)
+    sc.emit("start",name)
+    console.log(id)
+  })
 
   sc.on("pong", function (data) {
     console.log("Pong received from client");
