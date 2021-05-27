@@ -17,7 +17,7 @@ var app = require("express")();
 var http = require("http").Server(app);
 const io = require("socket.io")(http, {
   cors: {
-    origin: "http://127.0.0.1:5500",
+    origin: "http://localhost:5500",
     methods: ["GET", "POST"]
   }
 });
@@ -107,19 +107,6 @@ function sendHeartbeat() {
 
 io.on("connection", async (sc) => {
   console.log(`Socket ${sc.id} connected.`);
-  sc.on("user",async (id)=>{
-    const {name} = await User.findById(id)
-    sc.emit("start",name)
-    console.log(id)
-  })
-
-  sc.on("pong", function (data) {
-    console.log("Pong received from client");
-  });
-  sc.on("disconnect", () => {
-    console.log(`Socket ${sc.id} disconnected.`);
-  });
-
   sc.on("data", async (data) => {
     const info = new Info({
       _id:  new mongoose.Types.ObjectId,
@@ -130,6 +117,20 @@ io.on("connection", async (sc) => {
         console.log(info)
       })
   });
+  // sc.on("user",async (id)=>{
+  //   const {name} = await User.findById(id)
+  //   sc.emit("start",name)
+  //   console.log(id)
+  // })
+
+  sc.on("pong", function (data) {
+    console.log("Pong received from client");
+  });
+  sc.on("disconnect", () => {
+    console.log(`Socket ${sc.id} disconnected.`);
+  });
+
+ 
   setTimeout(sendHeartbeat, 8000);
 });
 

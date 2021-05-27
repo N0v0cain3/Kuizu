@@ -165,9 +165,13 @@ function close_stream() {
 
 function detectFrame() {
     model.detect(video).then(predictions => {
+        console.log("user",predictions.length)
+        if(predictions.length>1){
+            alert(`Please check your enviornment ${predictions.length} persons identified`)
+        }
         if(predictions[0])
       { 
-           console.log(predictions[0].class)
+        //    console.log(predictions[0].class)
 
         if(predictions[0].class!="person"){
             if(predictions[0].class=="cell phone"){
