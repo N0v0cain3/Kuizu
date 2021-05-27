@@ -103,109 +103,109 @@ function select(event){
 function showQuestion(event){
   const Questions =[
     {
-      question:"What is the capital of india",
-      correct:"Gujarat",
+      question:"Which one of the following is not a step of requirement engineering?",
+      correct:"design",
       options :[
         {
-         option:"Wuhan",
+         option:"documentation",
          correct:false 
         },
         {
-          option:"Gujarat",
+          option:"analysis",
+          correct:false
+         },
+         {
+          option:"design",
+          correct:true 
+         }
+      ]
+    },
+    {
+      question:"The spiral model was originally proposed by",
+      correct:"Barry Boehm",
+      options :[
+        {
+         option:"IBM",
+         correct:false 
+        },
+        {
+          option:"Barry Boehm",
           correct:true 
          },
          {
-          option:"Lahore",
+          option:"Pressman",
           correct:false 
          }
       ]
     },
     {
-      question:"Who invented the Light Bulb?",
-      correct:"Shivam Mehta",
+      question:"Spiral Model has user involvement in all its phases.",
+      correct:"False",
       options :[
         {
-         option:"Ricky Gervais",
+         option:"True",
          correct:false 
         },
         {
-          option:"Shivam Mehta",
+          option:"False",
           correct:true 
          },
          {
-          option:"Thomas Shelby",
+          option:"Can't say",
           correct:false 
          }
       ]
     },
     {
-      question:"One kilogram equals how many grams?",
-      correct:"1000",
+      question:"If you were to create client/server applications, which model would you go for?",
+      correct:"Concurrent Model",
       options :[
         {
-         option:"1000",
+         option:"WINWIN Spiral Model",
          correct:false 
         },
         {
-          option:"100",
+          option:"Concurrent Model",
           correct:true 
          },
          {
-          option:"10",
+          option:"Incremental Model",
           correct:false 
          }
       ]
     },
     {
-      question:"Which is the smallest even number?",
-      correct:"2",
+      question:"FAST stands for",
+      correct:"Facilitated Application Specification Technique",
       options :[
         {
-         option:"0",
-         correct:false 
+         option:"Facilitated Application Specification Technique",
+         correct:true 
         },
         {
-          option:"-2",
-          correct:true 
+          option:"Fast Application Specification Technique",
+          correct:false
          },
          {
-          option:"2",
+          option:"Functional Application Specification Technique",
           correct:false 
          }
       ]
     },
     {
-      question:"5 times 6 equals to",
-      correct:"30",
+      question:"The user system requirements are the parts of which document ?",
+      correct:"SRS",
       options :[
         {
-         option:"30",
+         option:"SDD",
          correct:false 
         },
         {
-          option:"11",
+          option:"SRS",
           correct:true 
          },
          {
-          option:"300",
-          correct:false 
-         }
-      ]
-    },
-    {
-      question:"Capital of Himachal Pradesh",
-      correct:"F",
-      options :[
-        {
-         option:"Shimla",
-         correct:false 
-        },
-        {
-          option:"Dharmashala",
-          correct:true 
-         },
-         {
-          option:"F",
+          option:"DDD",
           correct:false 
          }
       ]
@@ -248,7 +248,7 @@ console.log(answers)
 
 function result(){
   correct=0
-  correctAnswers = ["Gujarat","Shivam Mehta","1000","2","30","F"]
+  correctAnswers = ["design","Barry Boehm","False","Concurrent Model","Facilitated Application Specification Technique","SRS"]
   console.log(answers)
   for(i in answers){
     for(j in correctAnswers)

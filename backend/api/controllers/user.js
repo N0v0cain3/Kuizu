@@ -102,3 +102,8 @@ exports.login = async (req, res) => {
 		});
 };
 
+exports.getuser = async(req,res) => {
+	const founduser =await User.find()
+    console.log(founduser)
+    return res.status(200).json({user: founduser})
+}
