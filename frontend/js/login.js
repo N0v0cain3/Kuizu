@@ -47,4 +47,14 @@ function login()
 }
 }
 
+function getuser()
+{
+    var jwt = localStorage.getItem('JWT_Token')
+    console.log(jwt)
+    var xh = new XMLHttpRequest();
+    xh.open("GET", "http://localhost:3000/user/login", true)
+    xh.setRequestHeader('Content-Type', 'application/json')
+    xh.setRequestHeader('Authorization', jwt)
+    xh.send()
+}
 
