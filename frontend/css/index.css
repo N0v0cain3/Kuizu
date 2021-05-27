@@ -89,20 +89,32 @@ body {
 
 /* signup and login */
 .s{
-  margin-top:-50px
+  margin-top:-50px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
 }
 .sCon{
   height:100vh;
   display:flex;
   justify-content: center;
   align-items: center;
- 
+  width:40vw;
+}
+.sCon2{
+  height:100vh;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:80vw;
 }
 
 .signup{
   background:rgba(221, 34, 68, 0.5);
   padding:4%;
   border-radius: 20px;
+  width:80%;
 }
 .signup>h3{
   margin-top:0;
