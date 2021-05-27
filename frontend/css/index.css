@@ -109,7 +109,14 @@ body {
   align-items: center;
   width:80vw;
 }
-
+.sConContact{
+  height:100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:80vw;
+  margin:auto;
+}
 .signup{
   background:rgba(221, 34, 68, 0.5);
   padding:4%;
@@ -652,4 +659,36 @@ textarea{
 }
 .inputBox>input{
   padding:3%;
+}
+.block{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80vh;
+}
+.block img{
+  height:40vh;
+  border:2px solid red;
+  padding:3%;
+  border-radius: 50%;
+}
+.block div{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top:3%;
+}
+.block div button{
+  padding:2% 8%;
+  background:rgba(216,0,39,0.5);
+  border:none;
+  outline:none;
+  border-radius:3px;
+  margin:2%;
+}
+.block div button a{
+  text-decoration: none;
+  color:white;
 }
