@@ -59,8 +59,18 @@
 </table>
 
 ## Screenshots
-<img src="https://github.com/Manasvi070902/Kuizu/blob/master/frontend/assets/img1.png" alt="Project Screenshots">
+<img src="./frontend/assets/img1.png" alt="Project Screenshots">
 
+<img src="./frontend/assets/phone.png" alt="Project Screenshots">
+
+<img src="./frontend/assets/stop.png" alt="Project Screenshots">
+
+## Steps to run
+```
+$ git clone https://github.com/N0v0cain3/Kuizu.git
+$ cd backend && npm i 
+$ npm start
+```
 ## Contributors
 - <a href="https://github.com/N0v0cain3">Shivam Mehta</a>
 - <a href="https://github.com/mounvip1525">Mounvi Podapati</a>
